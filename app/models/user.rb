@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :first_name, presence: true, allow_blank: false
   validates :last_name, presence: true, allow_blank: false
   validates :adress, presence: true
+  mount_uploader :photo, PhotoUploader
 end

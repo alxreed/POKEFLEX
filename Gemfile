@@ -10,6 +10,8 @@ gem 'redis'
 gem 'devise'
 gem 'poke-api-v2'
 gem 'faker'
+gem 'cloudinary'
+gem 'carrierwave'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
