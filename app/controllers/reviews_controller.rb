@@ -8,13 +8,16 @@ class ReviewsController < ApplicationController
   end
 
   def new
+    @pokemon = Pokemon.find(params[:pokemon_id])
     @review = Review.new
+    authorize @review
   end
   
   def create
     # a voir
     @pokemon = Pokemon.find(params[:pokemon_id])
     @review = Review.new(review_params)
+    @review.user = current_user
     authorize @review
     @review.pokemon = @pokemon
     if @review.save
