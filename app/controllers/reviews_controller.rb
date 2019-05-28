@@ -1,5 +1,4 @@
 class ReviewsController < ApplicationController
-
   def index
     @reviews = policy_scope(Review).order(created_at: :desc)
   end
@@ -12,7 +11,7 @@ class ReviewsController < ApplicationController
     @review = Review.new
     authorize @review
   end
-  
+
   def create
     # a voir
     @pokemon = Pokemon.find(params[:pokemon_id])
@@ -23,7 +22,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to pokemon_path(@pokemon)
     else
-      render "pokemons/show"
+      render :new
     end
   end
 
