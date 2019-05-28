@@ -1,0 +1,73 @@
+.banner-search {
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  .form {
+    .recherche {
+      width: 20vw;
+      height: 4.5vh;
+      border: none;
+      border-bottom: 2px solid rgba($color: white, $alpha: 0.8);
+      background-color: rgba($color: white, $alpha: 0);
+      color: white;
+      font-family: 'montserrat';
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    
+    .btnrecherche {
+      background-color: rgba($color: white, $alpha: 0);
+      border: 2px solid rgba($color: white, $alpha: 0.8);
+      color: white;
+      font-family: 'montserrat';
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-left: 20px;
+      padding: 10px 15px;
+      border-radius: 40px;
+      &:hover {
+        color: rgba($color: black, $alpha: 0.7);
+        background-color: white;
+      }
+    }
+  }
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ color: white;
+ opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+ color: white;
+ opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: white;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: white;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+ color: white;
+}
+
+.petit-titre {
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 200px;
+  h1 {
+    font-weight: bold;
+    font-size: 5em;
+    text-shadow: 2px 2px 2px rgba($color: black, $alpha: 0.2)
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 5em;
+    text-shadow: 2px 2px 2px rgba($color: black, $alpha: 0.2)
+  }
+}
