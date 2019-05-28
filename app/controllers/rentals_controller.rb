@@ -15,8 +15,6 @@ class RentalsController < ApplicationController
     @rental = Rental.new(rental_params)
     @rental.pokemon = @pokemon
     @rental.user = @user
-    p "-"*10
-    p @rental
     if @rental.save
       redirect_to rental_path(@rental)
     else
@@ -31,6 +29,7 @@ class RentalsController < ApplicationController
   end
 
   def show
+    @rental = Rental.find(params[:id])
   end
 
   def destroy

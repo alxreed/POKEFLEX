@@ -32,6 +32,7 @@ class PokemonsController < ApplicationController
       redirect_to pokemon_path(@pokemon)
     else
       render :edit
+    end
   end
 
   def destroy
