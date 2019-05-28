@@ -1,14 +1,21 @@
-<h3>Add a rental</h3>
 <div class="container">
-<%= simple_form_for [@pokemon, @rental] do |f| %>
-  <%= f.input :starting_date, as: :date, start_year: Date.today.year,
-    end_year: Date.today.year,
-    order: [:day, :month, :year] %>
-  <%= f.input :ending_date, as: :date, start_year: Date.today.year,
-    end_year: Date.today.year,
-    order: [:day, :month, :year] %>
-  <%= f.submit class: "btn btn-primary"%>
-<% end %>
-
+  <div class="formofrental">
+  <h1>Rent</h1>
+  <h2><%= @pokemon.name %> from <%= @pokemon.user.first_name %> <%= @pokemon.user.last_name %></h2>
+  <div class="formulaireuh">
+    <%= simple_form_for [@pokemon, @rental] do |f| %>
+      <%= f.input :starting_date, as: :date, start_year: Date.today.year,
+        end_year: Date.today.year,
+        order: [:day, :month, :year] %>
+      <%= f.input :ending_date, as: :date, start_year: Date.today.year,
+        end_year: Date.today.year,
+        order: [:day, :month, :year] %>
+      <%= f.submit 'Rent Him !', class: "btnrent"%>
+    <% end %>
+    </div>
+    <div class="buttons">
+      <%= link_to 'Back', pokemon_path(@pokemon) %>
+      </div>
+  </div>
 </div>
 
