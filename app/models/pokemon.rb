@@ -7,4 +7,5 @@ class Pokemon < ApplicationRecord
   validates :name, presence: true, allow_blank: false
   validates :level, presence: true, inclusion: { in: (1..100) }
   validates :price, presence: true
+  validates :race, presence: true
 end

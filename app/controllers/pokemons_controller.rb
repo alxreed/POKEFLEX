@@ -9,23 +9,25 @@ class PokemonsController < ApplicationController
 
   def new
     @pokemon = Pokemon.new
+    authorize @pokemon
   end
 
   def create
-    race_id = params[:pokemon][:ingredient_id]
-    @race = Race.find(params[:pokemon][:race_id]) if race_id
+    @race = Race.find(params[:pokemon][:race_id])
     @pokemon = Pokemon.new(pokemon_params)
     @pokemon.race = @race
+    @pokemon.user = current_user
+    authorize @pokemon
     if @pokemon.save
       redirect_to pokemon_path(@pokemon)
     else
       render :new
     end
   end
-  
+
   def edit
   end
-  
+
   def update
     @pokemon.update(pokemon_params)
     if @pokemon.save
@@ -34,13 +36,13 @@ class PokemonsController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     @pokemon.destroy
   end
-  
+
   private
-  
+
   def set_pokemon
     @pokemon = Pokemon.find(params[:id])
     authorize @pokemon
