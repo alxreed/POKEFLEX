@@ -1,7 +1,7 @@
 class PokemonsController < ApplicationController
   before_action :set_pokemon, only: [:show, :edit, :update, :destroy]
   def index
-    @pokemons = Pokemon.all
+    @pokemons = policy_scope(Pokemon).order(created_at: :desc)
   end
 
   def show
@@ -22,26 +22,28 @@ class PokemonsController < ApplicationController
       render :new
     end
   end
-
+  
   def edit
   end
-
+  
   def update
     @pokemon.update(pokemon_params)
     if @pokemon.save
       redirect_to pokemon_path(@pokemon)
     else
       render :edit
+    end
   end
-
+  
   def destroy
     @pokemon.destroy
   end
-
+  
   private
-
+  
   def set_pokemon
     @pokemon = Pokemon.find(params[:id])
+    authorize @pokemon
   end
 
   def pokemon_params
