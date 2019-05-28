@@ -12,6 +12,7 @@ gem 'poke-api-v2'
 gem 'faker'
 gem 'cloudinary'
 gem 'carrierwave'
+gem 'pundit'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
