@@ -1,0 +1,35 @@
+.formofrental {
+  width: 40vw;
+  margin: 0 auto;
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba($color: #113f67, $alpha: 0.9);
+    font-weight: bold;
+    font-size: 4em;
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    color: rgba($color: #ee5a5a, $alpha: 0.9);
+    margin-bottom: 5vh;
+  }
+
+  .formulaireuh {
+  border: 1px solid rgba($color: black, $alpha: 0.2);
+  padding: 50px;
+  margin-bottom: 5vh;
+  }
+
+  .btnrent {
+    text-transform: uppercase;
+    padding: 8px 10px;
+    background-color: rgba($color: #113f67, $alpha: 0.8);
+    color: white;
+    font-weight: bold;
+    font-family: 'montserrat';
+    border: none;
+    margin-top: 10px;
+  }
+}
