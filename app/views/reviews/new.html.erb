@@ -1,2 +1,7 @@
-<H1>add a review to <%= @pokemon.review.name %> </H1>
-
+<div class="container">
+<div class="all">
+<h1>ADD A REVIEW TO <%= @pokemon.name.upcase %> </h1>
+<%= render 'form', pokemon: @pokemon, review: @review %>
+<%= link_to 'Back', pokemon_path(@pokemon) %>
+</div>
+</div>
