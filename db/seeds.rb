@@ -23,6 +23,15 @@ image_url = "https://www.serebii.net/pokemongo/pokemon/"
   Race.create!(name: pokemon["name"], category: pokemon["types"][0]["type"]["name"], location: location.sample, photo: photo)
 end
 
+User.create!(
+  email: "alex@gmail.com", 
+  password: "azerty", 
+  first_name: "alex", 
+  last_name: "bouvier", 
+  adress: "fhskjdhfskjhfe"
+)
+
+
 20.times do
   User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, adress: Faker::Address.full_address, password: "12345678")
 end
