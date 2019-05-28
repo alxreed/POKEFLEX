@@ -1,4 +1,12 @@
-<% @pokemons.each do |f| %>
-<li> <%= f.name %> - <%= f.race.name %>
-</li>
-<% end %>
+<div class="container" id="card-container">
+<% @pokemons.each do |pokemon| %>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= pokemon.race.photo %>);">
+          <div class="card-description">
+            <h2><%= pokemon.name %></h2>
+          </div>
+          <%= link_to "", pokemon_path(pokemon), class: 'card-link' %>
+        </div>
+      </div>
+    <% end %>
+</div>
