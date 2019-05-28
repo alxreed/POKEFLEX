@@ -4,6 +4,9 @@ class ReviewsController < ApplicationController
     @reviews = policy_scope(Review).order(created_at: :desc)
   end
 
+  def show
+  end
+
   def new
     @review = Review.new
   end
