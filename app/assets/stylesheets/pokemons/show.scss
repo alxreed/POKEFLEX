@@ -1,5 +1,4 @@
 .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://storage.googleapis.com/kaggle-datasets-images/635/1204/126be74882028aac7241553cef0e27a7/dataset-original.jpg);
   background-position: center;
   background-size: cover;
   height: 400px;
@@ -24,16 +23,19 @@
   width: 60vw;
   margin: 20px auto;
   .pokemon {
-    width: 95%;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba($color: black, $alpha: 0.2);
+    width: 90%;
     padding: 35px;
 
-    
+    .head-of-poke {
+      margin-bottom: 50px;
+    }
     .price {
       text-align: right;
       font-size: 2em;
       font-weight: bold;
-      color: rgba($color: black, $alpha: 0.9);
+      color: rgba($color: black, $alpha: 0.8);
+      margin-top: 60px;
     }
     .species {
       text-align: center;
@@ -43,14 +45,14 @@
       font-size: 2em;
     }
     .level {
-      text-align: center;
       font-size: 2em;
       color: rgba($color: black, $alpha: 0.7);
+      margin-left: 5vw;
     }
     h1 {
       text-transform: uppercase;
       text-align: center;
-      color: #40a798;
+      color: rgba($color:#113F67, $alpha: 0.8);
       font-weight: bold;
       font-size: 4em;
       margin-bottom: 0;
@@ -59,24 +61,28 @@
 }
 
 .user-infos {
+  width: 19vw;
   margin-left: 50px;
   margin-bottom: 20px;
-  padding: 15px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  padding: 25px;
+  border: 1px solid rgba($color: black, $alpha: 0.2);
   color: rgba(0, 0, 0, 0.5);
+  .ownerzzz {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      margin-left: 5px;
+    }
+  }
   .review {
     margin-bottom: 10px;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  .infos {
-    font-weight: bold;
-    color: rgba($color: #ee5a5a, $alpha: 0.8);
-  }
   h4 {
     text-align: center;
-    color: #40a798;
+    color: rgba($color:#113F67, $alpha: 0.8);    
     font-weight: bold;
     margin-bottom: 15px;
   }
@@ -106,7 +112,7 @@ p {
   margin: 0;
 }
 .buttons {
-  margin-top: 30px;
+  margin-top: 10vh;
   margin-bottom: 100px;
   a {
     text-transform: uppercase;
@@ -117,6 +123,28 @@ p {
     &:hover {
       text-decoration: none;
       box-shadow: 0 3px 0 rgba($color: black, $alpha: 0.7);
+    }
+  }
+}
+
+.renalpok {
+  margin-left: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .pokerent {
+    text-transform: uppercase;
+    font-family: 'montserrat';
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: rgba($color: black, $alpha: 0.7);
+    color: white;
+    padding: 5px 15px;
+    &:hover {
+    color: rgba($color: black, $alpha: 0.7);
+    background-color: white;
+    box-shadow: 0 3px 0 rgba($color: black, $alpha: 0.7);
+    text-decoration: none;
     }
   }
 }
