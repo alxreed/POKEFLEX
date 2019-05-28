@@ -1,17 +1,19 @@
 .all {
-  width: 50vw;
+  width: 40vw;
   margin: 5px auto;
-  border: 2px, solid, #113F67;
   h1 {
     text-align: center;
-    margin: 40px;
+    font-weight: bold;
     color: #113F67;
     font-family: "montserrat";
-    font-size: 38px;
+    font-size: 3em;
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
   .form-inputs {
+    margin-top: 20px;
     font-family: "montserrat";
-    font-size: 14px;
+    font-size: 1.2em;
     color: #113F67;
   }
   .form-actions {
