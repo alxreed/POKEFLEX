@@ -7,6 +7,7 @@ class RentalsController < ApplicationController
   def new
     @pokemon = Pokemon.find(params[:pokemon_id])
     @rental = Rental.new
+    authorize @rental
   end
 
   def create
@@ -15,6 +16,7 @@ class RentalsController < ApplicationController
     @rental = Rental.new(rental_params)
     @rental.pokemon = @pokemon
     @rental.user = @user
+    authorize @rental
     if @rental.save
       redirect_to rental_path(@rental)
     else
