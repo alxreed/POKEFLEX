@@ -36,6 +36,10 @@
       font-weight: bold;
       color: rgba($color: black, $alpha: 0.8);
       margin-top: 60px;
+      .perweek {
+        font-size: 0.6em !important;
+      color: rgba($color: black, $alpha: 0.6);
+      }
     }
     .species {
       text-align: center;
@@ -91,7 +95,7 @@
 .add-review{
   a{ 
     text-transform: uppercase;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-family: 'montserrat';
     font-weight: bold;
     color: rgba($color: black, $alpha: 0.5);
@@ -103,7 +107,13 @@
       color: rgba($color: black, $alpha: 0.8);
     }
     p{
+      margin-top: 15px;
       margin-left: 10px;
+    }
+    .fas.fa-plus {
+      margin-top: 15px;
+      margin-left: 10px;
+      font-size: 1em;
     }
   }
 }
@@ -118,7 +128,7 @@ p {
     text-transform: uppercase;
     color: rgba($color: black, $alpha: 0.7);
     font-family: 'montserrat';
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
     &:hover {
       text-decoration: none;
@@ -135,7 +145,7 @@ p {
   .pokerent {
     text-transform: uppercase;
     font-family: 'montserrat';
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
     background-color: rgba($color: black, $alpha: 0.7);
     color: white;
