@@ -6,16 +6,21 @@
 <div class="container">
   <div class="grosse-div">
     <div class="pokemon">
-      <h1><%= @pokemon.name %></h1>
-      <p class="species"><%= @pokemon.race.name %> </p>
-      <p class="level">level <%= @pokemon.level %></p>
-      <p class="level"> <%= @pokemon.race.category %></p>
+      <div class="head-of-poke">
+        <h1><%= @pokemon.name %></h1>
+        <p class="species"><%= @pokemon.race.name %> </p>
+      </div>
+      <p class="level"><i class="fas fa-angle-double-up"></i> <%= @pokemon.level %></p>
+      <p class="level"><i class="fas fa-frog"></i> <%= @pokemon.race.category %></p>
       <p class="level"><i class="fas fa-seedling"></i> <%= @pokemon.race.location %></p>
       <p class="price"><%= @pokemon.price %> $</p>
     </div>
     <div class="infos-reviews">
       <div class="user-infos">
-        <h4>Owner Informations</h4>
+        <div class="ownerzzz">
+          <h4>Owner Informations</h4>
+          <%= image_tag @pokemon.user.photo.url, class: "avatar dropdown-toggle", id: "navbarDropdown" %>
+        </div>
         <p><i class="fas fa-user"></i> <span class="infos"><%= @pokemon.user.first_name %> <%= @pokemon.user.last_name %></span></p>
         <p><i class="fas fa-home"></i> <span class="infos"><%= @pokemon.user.adress %></span></p>
         <p><i class="fas fa-envelope"></i> <span class="infos"><%= @pokemon.user.email %></span></p>
@@ -36,6 +41,9 @@
         <i class="fas fa-plus"></i> <p>add a new review</p>
         <% end %>
         </div>
+      </div>
+      <div class="renalpok">
+      <%= link_to 'Rent this pokemon', new_pokemon_rental_path(@pokemon), class: "pokerent" %>
       </div>
     </div>
   </div>
