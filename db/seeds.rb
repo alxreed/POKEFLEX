@@ -8,14 +8,21 @@
 require 'json'
 require 'open-uri'
 
+puts "Destory all"
+Review.destroy_all
+Rental.destroy_all
+Pokemon.destroy_all
 Race.destroy_all
+User.destroy_all
 
 
+puts "create Race"
 
 url = "https://pokeapi.co/api/v2/pokemon/"
 image_url = "https://www.serebii.net/pokemongo/pokemon/"
 # sprintf('%03d', number)
 image_url2 = "https://img.pokemondb.net/artwork/"
+
 
 (1..151).each do |number|
   location = ["Pallet Town", "Viridian City", "Pewter City", "Cerulean City", "Vermilion City", "Lavender Town", "Celadon City", "Fuschia City", "Saffron City", "Cinnabar Island"]
@@ -24,6 +31,8 @@ image_url2 = "https://img.pokemondb.net/artwork/"
   photo = image_url2 + pokemon["name"] + ".jpg"
   Race.create!(name: pokemon["name"], category: pokemon["types"][0]["type"]["name"], location: location.sample, photo: photo)
 end
+
+puts "Create Johnny"
 
 User.create!(
   email: "johnny@gmail.com", 
@@ -45,6 +54,8 @@ puts "creating pokemons gotta catch 'em all !"
   Pokemon.create!(name: Faker::Name.first_name, level: rand(1..100), price: rand(50..1500), user: User.all.sample, race: Race.all.sample)
   print "#"
 end
+
+puts "Review" 
 
 700.times do
   Review.create!(content: Faker::Lorem.paragraph(4), rating: rand(1..5), user: User.all.sample, pokemon: Pokemon.all.sample)
