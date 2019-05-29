@@ -16,6 +16,7 @@
 }
 .card-description h2 {
   font-size: 24px;
+  color: rgba($color: #000000, $alpha: 0.7);
 }
 .card-link {
   box-shadow: 5px 5px 15px rgba(186, 126, 126, .5);
@@ -47,7 +48,7 @@
 }
 
 #level {
-  color: blue;
+  color: rgba($color: #113f67, $alpha: 0.7);
   font-style: italic;
   font-size: 16px;
   font-family: "Montserrat", "Helvetica", "sans-serif";
@@ -55,7 +56,7 @@
 }
 
 .card-price {
-  color: red;
+  color: rgba($color: #ee5a5a, $alpha: 0.8);
   width: 30%;
   height: 60px;
   text-align: center;
