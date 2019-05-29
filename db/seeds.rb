@@ -26,11 +26,12 @@ image_url2 = "https://img.pokemondb.net/artwork/"
 end
 
 User.create!(
-  email: "alex@gmail.com", 
+  email: "johnny@gmail.com", 
   password: "azerty", 
-  first_name: "alex", 
-  last_name: "bouvier", 
-  adress: "fhskjdhfskjhfe"
+  first_name: "Johnny", 
+  last_name: "Hallyday", 
+  adress: "Heaven",
+  remote_photo_url: "https://img.20mn.fr/fJLACNEtRQO9P4VEVcjRPw/830x532_johnny-hallyday-concert-olympia-17-juin-2000.jpg"
 )
 
 puts 'creating users..(may take some time'
