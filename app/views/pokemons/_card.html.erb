@@ -1,0 +1,9 @@
+ <div class="col-xs-12 col-sm-6 col-md-4" id="carte-pokemon">
+          <%= link_to "", pokemon_path(pokemon), class: 'card-link' %>
+        <div class="card" style="background-image: url(<%= pokemon.race.photo %>);">
+        </div>
+          <div class="card-description">
+            <div><h2><%= pokemon.name %> - <span id="level">  lvl: <%= pokemon.level %> </span></h2></div>
+            <div class="card-price"> <%= pokemon.price %> $</div>
+          </div>
+      </div>
