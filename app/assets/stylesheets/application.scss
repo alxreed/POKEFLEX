@@ -31,3 +31,35 @@
 @import "pages/index";
 @import "pages/card";
 @import "pages/login";
+
+
+@media (max-width: 1400px) {
+  body {
+    font-size: 14px;
+    .container {
+      width: 60vw;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    font-size: 12px;
+    .container {
+      width: 60vw;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 8px;
+  }
+}
+
