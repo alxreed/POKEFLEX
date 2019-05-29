@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="rental-confirmation">
+    <h1>Your booking is confirmed!</h1>
+    <p>The Pokemon is yours. Have fun!</p>
+    <div class="rental-card">
+      <div class="picofpokerental" style="background-image: url('<%= cl_image_path @rental.pokemon.race.photo%>')">
+      </div>
+    <div class="pokeinfosrental">
+      <p><%= @rental.pokemon.name %></p>
+      <p><%= @rental.pokemon.race.name %></p>
+      <p><%= @rental.user.first_name %> <%= @rental.user.last_name %></p>
+      <p><%= @rental.user.email %></p>
+      <p><%= @rental.user.adress %></p>
+    </div>
+  </div>
+</div>

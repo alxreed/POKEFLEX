@@ -1,0 +1,24 @@
+.rental-confirmation {
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #113F67;
+    font-family: "montserrat";
+    font-size: 3em;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  p {
+    text-align: center;
+    color: #113F67;
+    font-family: "montserrat";
+  }
+  .rental-card {
+    width: 20vw;
+    margin: 0 auto;
+    .picofpokerental {
+      width: 10vw;
+      height: 10vw;
+    }
+  }
+}
