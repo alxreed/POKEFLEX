@@ -48,6 +48,11 @@
       </div>
     </div>
   </div>
+      <% if policy(@pokemon).edit? %>
+        <div class="buttons">
+          <%= link_to "Update", edit_pokemon_path(@pokemon) %>
+        </div>
+      <% end %>
       <div class="buttons">
       <%= link_to 'Back', pokemons_path %>
       </div>
