@@ -1,7 +1,33 @@
-<div class="" id="user-infos">
-<%= @user.first_name %>
-<%= @user.last_name %>
-</div>
-<div class="" id="buttons">
-<%= link_to "Add a pokemon to your collection", new_pokemon_path, class: "btn btn-primary btn-lg" %>
+<div class="container">
+  <div class="profile">
+    <div class="show-user-titre">
+      <div class="user-show-profilpic" style="background-image: url('<%= @user.photo.url%>')">
+      </div>
+      <div class="user-show-infos">
+        <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+        <p>Dresseur pokemon</p>
+      </div>
+    </div>
+    <div class="user-infos-display">
+      <h2>Informations</h2>
+      <p><i class="fas fa-home"></i> <%= @user.adress %></p>
+      <p><i class="fas fa-envelope"></i> <%= @user.email %></p>
+      <p><i class="fas fa-key"></i> ********</p>
+    </div>
+    <div class="pokemons-user-display">
+      <h2>pokemons</h2>
+      <div class="pokepic-user-show">
+        <% @user.pokemons.each do |p| %>
+          <%= link_to pokemon_path(p) do %>
+          <div class="eachpokepic" style="background-image: url('<%= p.race.photo %>')">
+            <div class="user-show-poke-infos">
+              <h4><%= p.name %></h4>
+              <p><%= p.race.name %></p>
+              <p><%= p.price %> $</p>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
 </div>
