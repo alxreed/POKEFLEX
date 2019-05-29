@@ -9,24 +9,24 @@
       </div>
     </div>
     <div class="user-infos-display">
-      <h2>Informations</h2>
+      <h3>Informations</h3>
       <p><i class="fas fa-home"></i> <%= @user.adress %></p>
       <p><i class="fas fa-envelope"></i> <%= @user.email %></p>
       <p><i class="fas fa-key"></i> ********</p>
     </div>
     <div class="pokemons-user-display">
-      <h2>pokemons</h2>
+      <h3>pokemons</h3>
       <div class="pokepic-user-show">
         <% @user.pokemons.each do |p| %>
-          <%= link_to pokemon_path(p) do %>
-          <div class="eachpokepic" style="background-image: url('<%= p.race.photo %>')">
-            <div class="user-show-poke-infos">
-              <h4><%= p.name %></h4>
-              <p><%= p.race.name %></p>
-              <p><%= p.price %> $</p>
-            </div>
-          </div>
-          <% end %>
+          <div class="col-xs-12 col-sm-6 col-md-4" id="carte-pokemon">
+                    <%= link_to "", pokemon_path(p), class: 'card-link' %>
+                  <div class="card" style="background-image: url(<%= p.race.photo %>);">
+                  </div>
+                    <div class="card-description">
+                      <div><h2><%= p.name %> - <span id="level">  lvl: <%= p.level %> </span></h2></div>
+                      <div class="card-price"> <%= p.price %> $</div>
+                    </div>
+                </div>
         <% end %>
     </div>
   </div>
