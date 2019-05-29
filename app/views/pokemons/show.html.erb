@@ -20,7 +20,7 @@
       <div class="user-infos">
         <div class="ownerzzz">
           <h4>Owner Informations</h4>
-          <%= image_tag @pokemon.user.photo.url, class: "avatar dropdown-toggle", id: "navbarDropdown" %>
+          <%= cl_image_tag @pokemon.user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown" if @pokemon.user.photo.present? %>
         </div>
         <p><i class="fas fa-user"></i> <span class="infos"><%= @pokemon.user.first_name %> <%= @pokemon.user.last_name %></span></p>
         <p><i class="fas fa-home"></i> <span class="infos"><%= @pokemon.user.adress %></span></p>
