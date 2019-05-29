@@ -23,7 +23,6 @@ class PokemonsController < ApplicationController
     @pokemon.user = current_user
     authorize @pokemon
     if @pokemon.save
-      set_urls
       redirect_to pokemon_path(@pokemon)
     else
       render :new
