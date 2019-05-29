@@ -48,12 +48,14 @@
       </div>
     </div>
   </div>
-      <% if policy(@pokemon).edit? %>
+      <div class="show-poke-if">
         <div class="buttons">
-          <%= link_to "Update", edit_pokemon_path(@pokemon) %>
+        <%= link_to 'Back', pokemons_path %>
         </div>
-      <% end %>
-      <div class="buttons">
-      <%= link_to 'Back', pokemons_path %>
+        <% if policy(@pokemon).edit? %>
+          <div class="buttons">
+            <%= link_to "Update", edit_pokemon_path(@pokemon) %>
+          </div>
+        <% end %>
       </div>
 </div>

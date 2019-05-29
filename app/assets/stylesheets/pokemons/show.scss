@@ -124,6 +124,7 @@ p {
 .buttons {
   margin-top: 2vh;
   margin-bottom: 100px;
+  margin-right: 200px;
   a {
     text-transform: uppercase;
     color: rgba($color: black, $alpha: 0.7);
@@ -157,4 +158,16 @@ p {
     text-decoration: none;
     }
   }
+}
+
+.show-poke-if {
+  display: flex;
+}
+
+.fas {
+  margin-right: 15px;
+}
+
+.fas.fa-angle-double-up {
+  margin-right: 32px;
 }
