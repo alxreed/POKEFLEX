@@ -171,3 +171,15 @@ p {
 .fas.fa-angle-double-up {
   margin-right: 32px;
 }
+
+.user-profile-btn {
+  color: rgba($color: #ee5a5a, $alpha: 0.5);
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  &:hover {
+  color: rgba($color: #ee5a5a, $alpha: 0.8);
+
+    text-decoration: none;
+  }
+}

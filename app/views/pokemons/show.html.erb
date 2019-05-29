@@ -25,6 +25,7 @@
         <p><i class="fas fa-user"></i> <span class="infos"><%= @pokemon.user.first_name %> <%= @pokemon.user.last_name %></span></p>
         <p><i class="fas fa-home"></i> <span class="infos"><%= @pokemon.user.adress %></span></p>
         <p><i class="fas fa-envelope"></i> <span class="infos"><%= @pokemon.user.email %></span></p>
+        <%= link_to 'See user profile', user_path(@pokemon.user), class: "user-profile-btn" %>
       </div>
       <div class="user-infos">
         <h4>Reviews</h4>
