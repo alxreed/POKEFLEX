@@ -1,0 +1,16 @@
+.index-my-rentals {
+  h1 {
+    text-transform: uppercase;
+    color: rgba($color: #113f67, $alpha: 0.8);
+    font-weight: bold;
+    text-align: center;
+  }
+  .rental-card {
+    width: 20vw;
+    margin: 0 auto;
+    .picofpokerental {
+      width: 10vw;
+      height: 10vw;
+    }
+  }
+}
