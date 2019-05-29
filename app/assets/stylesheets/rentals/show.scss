@@ -1,0 +1,72 @@
+.index-my-rentals {
+  h1 {
+    text-transform: uppercase;
+    color: rgba($color: #113f67, $alpha: 0.8);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    color: rgba($color: #ee5a5a, $alpha: 0.9);
+    margin-bottom: 5vh;
+  }
+  .rental-card {
+    width: 35vw;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .price-rentals {
+      margin-left: 20px;
+      font-weight: bold;
+      font-size: 1.5em;
+      color: rgba($color: #ee5a5a, $alpha: 0.8);
+    }
+    .picofpokerental {
+      width: 10vw;
+      height: 10vw;
+      background-position: center;
+      background-size: cover;
+    }
+    .pokeinfosrental {
+      padding: 10px 20px;
+      h2 {
+        text-transform: uppercase;
+        color: rgba($color: #000000, $alpha: 0.6);
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+      .race-rental-user {
+        color: rgba($color: #ee5a5a, $alpha: 0.8);
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+      .div-pic-owner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        h3 {
+          margin-right: 50px;
+          margin-bottom: 0;
+          color: rgba($color: #000000, $alpha: 0.6);
+          font-weight: bold;
+        }
+      }
+          p {
+            color: rgba($color: #000000, $alpha: 0.4);
+          }
+          h3 {
+            margin-top: 20px;
+            margin-bottom: 0;
+            color: rgba($color: #000000, $alpha: 0.6);
+            font-weight: bold;
+          }
+    }
+  }
+}

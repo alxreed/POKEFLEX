@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="index-my-rentals">
+    <h1>Your booking is confirmed!</h1>
+    <div class="rental-card">
+      <div class="picofpokerental" style="background-image: url('<%= cl_image_path @rental.pokemon.race.photo%>')">
+      </div>
+      <div class="pokeinfosrental">
+        <h2><%= @rental.pokemon.name %></h2>
+        <p class="race-rental-user"><%= @rental.pokemon.race.name %></p>
+        <div class="div-pic-owner">
+          <h3>Owned by</h3>
+          <%= cl_image_tag @rental.pokemon.user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown" if @rental.pokemon.user.photo.present? %>
+        </div>
+        <p><%= @rental.pokemon.user.first_name %> <%= @rental.pokemon.user.last_name %></p>
+        <p><%= @rental.pokemon.user.email %></p>
+        <p><%= @rental.pokemon.user.adress %></p>
+        <h3>Date</h3>
+        <p><%= @rental.starting_date %> to <%= @rental.ending_date %></p>
+      </div>
+      <p class="price-rentals"><%= @rental.pokemon.price %> $</p>
+    </div>
+    <h2>The Pokemon is yours. Have fun!</h2>
+    <div class="buttons">
+        <%= link_to 'Back', "/" %>
+    </div>
+</div>
