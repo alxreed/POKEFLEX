@@ -31,7 +31,7 @@ User.create!(
   first_name: "Johnny", 
   last_name: "Hallyday", 
   adress: "Heaven",
-  remote_photo_url: "https://img.20mn.fr/fJLACNEtRQO9P4VEVcjRPw/830x532_johnny-hallyday-concert-olympia-17-juin-2000.jpg"
+  remote_photo_url: "https://gal.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgal.2F2018.2F02.2F22.2Fa2ff4515-a7b6-44b2-87f3-9454d1c3623d.2Ejpeg/480x480/quality/80/a-st-barth-johnny-hallyday-n-avait-pas-fini-de-payer-les-travaux-de-la-villa-jade.jpg"
 )
 
 puts 'creating users..(may take some time'
