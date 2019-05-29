@@ -6,11 +6,30 @@
         <div class="picofpokerental" style="background-image: url('<%= cl_image_path rental.pokemon.race.photo%>')">
         </div>
         <div class="pokeinfosrental">
-          <p><%= rental.pokemon.name %></p>
-          <p><%= rental.pokemon.race.name %></p>
-          <p><%= rental.user.first_name %> <%= rental.user.first_name %></p>
+          <h2><%= rental.pokemon.name %></h2>
+          <p class="race-rental-user"><%= rental.pokemon.race.name %></p>
+          <div class="div-pic-owner">
+            <h3>Owned by</h3>
+            <%= cl_image_tag rental.pokemon.user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown" if rental.pokemon.user.photo.present? %>
+          </div>
+          <p><%= rental.pokemon.user.first_name %> <%= rental.pokemon.user.last_name %></p>
+          <p><%= rental.pokemon.user.email %></p>
+          <p><%= rental.pokemon.user.adress %></p>
+          <h3>Date</h3>
+          <p><%= rental.starting_date %> to <%= rental.ending_date %></p>
         </div>
+        <p class="price-rentals"><%= rental.pokemon.price %> $</p>
       </div>
     <% end %>
+      <div class="total-price">
+        <% total = 0 %>
+        <% @rentals.each do |rental| %>
+        <% total += rental.pokemon.price %>
+        <% end %>
+        <p>pay <%= total %> $</p>
+      </div>
+      <div class="buttons">
+        <%= link_to 'Back', "/" %>
+      </div>
   </div>
 </div>
