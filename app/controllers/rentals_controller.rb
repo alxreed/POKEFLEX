@@ -1,9 +1,14 @@
 class RentalsController < ApplicationController
 
   def index
-    @rentals = Rental.all
+    @rentals = policy_scope(Rental)
   end
 
+  def show
+    @rental = Rental.find(params[:id])
+    authorize @rental
+  end
+  
   def new
     @pokemon = Pokemon.find(params[:pokemon_id])
     @rental = Rental.new
@@ -12,10 +17,7 @@ class RentalsController < ApplicationController
 
   def create
     @pokemon = Pokemon.find(params[:pokemon_id])
-    # @user = User.find(params[:user_id])
-    @rental = Rental.new(rental_params)
-    @rental.pokemon = @pokemon
-    @rental.user = @user
+    @rental = Rental.new(rental_params.merge(pokemon: @pokemon, user: current_user))
     authorize @rental
     if @rental.save
       redirect_to rental_path(@rental)
@@ -30,9 +32,6 @@ class RentalsController < ApplicationController
   def update
   end
 
-  def show
-    @rental = Rental.find(params[:id])
-  end
 
   def destroy
   end
