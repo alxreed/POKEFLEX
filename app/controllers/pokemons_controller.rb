@@ -1,10 +1,11 @@
 class PokemonsController < ApplicationController
   before_action :set_pokemon, only: [:show, :edit, :update, :destroy]
   def index
-    if params["search"] == ""
+    p params
+    if params[:search].nil?
       @pokemons = policy_scope(Pokemon).order(created_at: :desc)
     else
-      @pokemons = policy_scope(Pokemon.joins(:race)).where("races.name LIKE ?", "%#{params["search"]}%")
+      @pokemons = policy_scope(Pokemon.joins(:race)).where("races.name ILIKE ?", params[:search])
     end
   end
 
