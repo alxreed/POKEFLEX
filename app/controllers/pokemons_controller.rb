@@ -43,6 +43,7 @@ class PokemonsController < ApplicationController
 
   def destroy
     @pokemon.destroy
+    redirect_to user_path(@current_user)
   end
 
   private
