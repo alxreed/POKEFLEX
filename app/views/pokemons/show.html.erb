@@ -15,7 +15,7 @@
       <p class="level"><i class="fas fa-frog"></i> <%= @pokemon.race.category %></p>
       <p class="level"><i class="fas fa-seedling"></i> <%= @pokemon.race.location %></p>
       <p class="price"><%= @pokemon.price %> $ <span class="perweek">/week</span></p>
-      </div>
+    </div>
     <div class="infos-reviews">
       <div class="user-infos">
         <div class="ownerzzz">
@@ -31,37 +31,38 @@
         <h4>Reviews</h4>
         <% @pokemon.reviews.each do |r| %>
           <div class="review">
-          <p><%= r.content %></p>
-          <p><% r.rating.times do  %>
-          <i class="fas fa-star"></i>
-          <% end %>
-          </p>
+            <p><%= r.content %></p>
+            <p><% r.rating.times do  %>
+                <i class="fas fa-star"></i>
+              <% end %>
+            </p>
           </div>
         <% end %>
         <div class="add-review">
-        <%= link_to new_pokemon_review_path(@pokemon) do %>
-        <i class="fas fa-plus"></i> <p>add a new review</p>
-        <% end %>
+          <%= link_to new_pokemon_review_path(@pokemon) do %>
+            <i class="fas fa-plus"></i>
+            <p>add a new review</p>
+          <% end %>
         </div>
       </div>
       <div class="renalpok">
-      <%= link_to 'Rent this pokemon', new_pokemon_rental_path(@pokemon), class: "pokerent" %>
+        <%= link_to 'Rent this pokemon', new_pokemon_rental_path(@pokemon), class: "pokerent" %>
       </div>
     </div>
   </div>
-      <div class="show-poke-if">
-        <div class="buttons">
-        <%= link_to 'Back', pokemons_path %>
-        </div>
-        <% if policy(@pokemon).edit? %>
-          <div class="buttons">
-            <%= link_to "Update", edit_pokemon_path(@pokemon) %>
-          </div>
-        <% end %>
-        <% if policy(@pokemon).destroy? %>
-          <div class="buttons">
-            <%= link_to "Delete", pokemon_path(@pokemon), method: :delete, data: { confirm: "Are you sure?" } %>
-          </div>
-        <% end %>
+  <div class="show-poke-if">
+    <div class="buttons">
+      <%= link_to 'Back', pokemons_path %>
+    </div>
+    <% if policy(@pokemon).edit? %>
+      <div class="buttons">
+        <%= link_to "Update", edit_pokemon_path(@pokemon) %>
       </div>
+    <% end %>
+    <% if policy(@pokemon).destroy? %>
+      <div class="buttons">
+        <%= link_to "Delete", pokemon_path(@pokemon), method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+    <% end %>
+  </div>
 </div>
