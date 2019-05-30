@@ -15,7 +15,21 @@
   </div>
 </div>
 <div class="container" id="card-container">
-<% @pokemons.each do |pokemon| %>
-    <%= render 'card', pokemon: pokemon %>
-    <% end %>
+  <div class="row text-center">
+    <div class="col-xs-4">
+      <% @pokemons.each do |pokemon| %>
+        <%= render 'card', pokemon: pokemon %>
+      <% end %>
+    </div>
+  </div>
 </div>
+
+<script type="text/javascript">
+  const cards = document.querySelectorAll("figure")
+  cards.forEach((card) => {
+  card.classList.remove("card--normal");
+  card.classList.add(`card--${card.querySelector("h3").dataset.category}`);
+});
+
+
+</script>

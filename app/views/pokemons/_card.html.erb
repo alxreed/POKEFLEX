@@ -1,9 +1,51 @@
- <div class="col-xs-12 col-sm-6 col-md-4" id="carte-pokemon">
-          <%= link_to "", pokemon_path(pokemon), class: 'card-link' %>
-        <div class="card" style="background-image: url(<%= pokemon.race.photo %>);">
-        </div>
-          <div class="card-description">
-            <div><h2><%= pokemon.name %> - <span id="level">  lvl: <%= pokemon.level %> </span></h2></div>
-            <div class="card-price"> <%= pokemon.price %> $</div>
-          </div>
+<%= link_to pokemon_path(pokemon), class: "link-without-css" do %>
+  <figure class="card card--normal">
+    <div class="card__image-container">
+      <img src="<%= pokemon.race.photo %>" alt="<%= pokemon.name %>" class="card__image">
+    </div>
+
+    <figcaption class="card__caption">
+      <h1 class="card__name"><%= pokemon.name %></h1>
+
+      <h3 class="card__type" data-category="<%= pokemon.race.category %>">
+          <%= pokemon.race.category %>
+      </h3>
+
+      <table class="card__stats">
+        <tbody><tr>
+          <th>HP</th>
+          <td><%= pokemon.level %></td>
+        </tr>
+        <tr>
+          <th>Attack</th>
+          <td><%= rand(1..100).to_s %></td>
+        </tr>
+
+        <tr>
+          <th>Defense</th>
+          <td><%= rand(1..100).to_s %></td>
+        </tr>
+
+        <tr>
+          <th>Special Attack</th>
+          <td><%= rand(1..100).to_s %></td>
+        </tr>
+        <tr>
+          <th>Special Defense</th>
+          <td><%= rand(1..100).to_s %></td>
+        </tr>
+        <tr>
+          <th>Speed</th>
+          <td><%= rand(1.100).to_s %></td>
+        </tr>
+      </tbody></table>
+
+      <div class="card__abilities">
+        <h4 class="card__ability">
+          <span class="card__label">Price</span>
+          <%= pokemon.price.to_s + "€" %>
+        </h4>
       </div>
+    </figcaption>
+  </figure>
+<% end %>
