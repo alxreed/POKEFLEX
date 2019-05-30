@@ -58,5 +58,10 @@
             <%= link_to "Update", edit_pokemon_path(@pokemon) %>
           </div>
         <% end %>
+        <% if policy(@pokemon).destroy? %>
+          <div class="buttons">
+            <%= link_to "Delete", pokemon_path(@pokemon), method: :delete, data: { confirm: "Are you sure?" } %>
+          </div>
+        <% end %>
       </div>
 </div>

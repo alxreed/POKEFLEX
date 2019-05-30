@@ -35,7 +35,7 @@ class PokemonsController < ApplicationController
   def update
     @pokemon.update(pokemon_params)
     if @pokemon.save
-      redirect_to pokemon_path(@pokemon)
+      redirect_to user_path(@user)
     else
       render :edit
     end
@@ -43,6 +43,7 @@ class PokemonsController < ApplicationController
 
   def destroy
     @pokemon.destroy
+    redirect_to user_path(@current_user)
   end
 
   private
