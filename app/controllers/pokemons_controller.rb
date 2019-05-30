@@ -1,4 +1,5 @@
 class PokemonsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_pokemon, only: [:show, :edit, :update, :destroy]
   def index
     if params["search"] == ""
