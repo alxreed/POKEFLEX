@@ -19,18 +19,23 @@
     </div>
     <div class="pokemons-user-display">
       <h3>pokemons</h3>
-      <div class="pokepic-user-show">
-        <% @user.pokemons.each do |p| %>
-          <div class="col-xs-12 col-sm-6 col-md-4" id="carte-pokemon">
-                    <%= link_to "", pokemon_path(p), class: 'card-link' %>
-                  <div class="card" style="background-image: url(<%= p.race.photo %>);">
-                  </div>
-                    <div class="card-description">
-                      <div><h2><%= p.name %> - <span id="level">  lvl: <%= p.level %> </span></h2></div>
-                      <div class="card-price"> <%= p.price %> $</div>
-                    </div>
-                </div>
-        <% end %>
     </div>
   </div>
 </div>
+<div class="container" id="card-container">
+  <div class="row text-center">
+    <div class="col-xs-4">
+      <% @user.pokemons.each do |pokemon| %>
+        <%= render 'pokemons/card', pokemon: pokemon %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  const cards = document.querySelectorAll("figure")
+  cards.forEach((card) => {
+  card.classList.remove("card--normal");
+  card.classList.add(`card--${card.querySelector("h3").dataset.category}`);
+});
+</script>
