@@ -11,6 +11,8 @@ class PokemonsController < ApplicationController
   end
 
   def show
+    @rental = Rental.new
+    @review = Review.new
   end
 
   def new

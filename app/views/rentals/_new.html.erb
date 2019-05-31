@@ -1,0 +1,13 @@
+<div class="formulaireuh">
+  <h2>Book <%= @pokemon.name %>, and start your journey!</h2>
+  <%= simple_form_for [@pokemon, @rental] do |f| %>
+    <%= f.input :starting_date, as: :date, start_year: Date.today.year,
+      end_year: Date.today.year + 2,
+        order: [:day, :month, :year] %>
+      <%= f.input :ending_date, as: :date, start_year: Date.today.year,
+        end_year: Date.today.year + 2,
+        order: [:day, :month, :year] %>
+        <hr>
+      <%= f.submit 'Rent Him !', class: "btnrent"%>
+  <% end %>
+</div>
