@@ -4,9 +4,9 @@ class PokemonsController < ApplicationController
   def index
     p params
     if params[:search].nil?
-      @pokemons = policy_scope(Pokemon).order(created_at: :desc)
+      @pokemons = policy_scope(Pokemon).order(created_at: :desc).where(booked: false)
     else
-      @pokemons = policy_scope(Pokemon.joins(:race)).where("races.name ILIKE :query OR pokemons.name ILIKE :query", query: params[:search])
+      @pokemons = policy_scope(Pokemon.joins(:race)).where("races.name ILIKE :query OR pokemons.name ILIKE :query", query: params[:search]).where(booked: false)
     end
   end
 

@@ -18,7 +18,10 @@
   <div class="row text-center">
     <div class="col-xs-4">
       <% @pokemons.each do |pokemon| %>
+        <% unless pokemon.booked %>
         <%= render 'card', pokemon: pokemon %>
+          
+        <% end %>
       <% end %>
     </div>
   </div>
