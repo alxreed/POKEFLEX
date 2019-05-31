@@ -71,7 +71,7 @@ end
 puts ""
 
 
-puts "creating reviews..." 
+puts "Creating reviews..." 
 
 700.times do
   comment = ["Really good pokemon!", "Bad pokemon", "I lost my fight...", "This pokemon is super strong !", "Thank you pokeflex !", "I wanted to try this pokemon for a long time, thank you !", "I didn't win but i had a really nice time with this pokemon", "I am really dispapointed with this pokemon", "Top !", "Bad !", "So disapointed...", "This pokemon would not woke up", "S****y pokemon", "So great !", "F*** you", "I wanna be the very best, has no one ever was. Catching all is my real quest.", "...", "Wooow you must be a very good pokemaster", "After testing this pokemon i'm gonna raise my own now !"]
@@ -80,4 +80,4 @@ puts "creating reviews..."
 end
 puts "#"  
 
-puts "seed completed !"
+puts "Seed completed !"
