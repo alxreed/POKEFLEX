@@ -141,7 +141,6 @@ p {
 .buttons {
   margin-top: 2vh;
   margin-bottom: 100px;
-  margin-right: 200px;
 
   a {
     text-transform: uppercase;
@@ -183,6 +182,7 @@ p {
 
 .show-poke-if {
   display: flex;
+  justify-content: space-between;
 }
 
 .fas {
