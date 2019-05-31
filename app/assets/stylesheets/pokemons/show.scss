@@ -5,7 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
 }
+
 .poke-pic {
   width: 300px;
   height: 300px;
@@ -22,6 +24,7 @@
   justify-content: space-around;
   width: 60vw;
   margin: 20px auto;
+
   .pokemon {
     border: 1px solid rgba($color: black, $alpha: 0.2);
     width: 90%;
@@ -30,17 +33,20 @@
     .head-of-poke {
       margin-bottom: 50px;
     }
+
     .price {
       text-align: right;
       font-size: 2em;
       font-weight: bold;
       color: rgba($color: black, $alpha: 0.8);
       margin-top: 60px;
+
       .perweek {
         font-size: 0.6em !important;
-      color: rgba($color: black, $alpha: 0.6);
+        color: rgba($color: black, $alpha: 0.6);
       }
     }
+
     .species {
       text-align: center;
       color: #ee5a5a;
@@ -48,11 +54,13 @@
       font-family: 'open-sans';
       font-size: 2em;
     }
+
     .level {
       font-size: 2em;
       color: rgba($color: black, $alpha: 0.7);
       margin-left: 5vw;
     }
+
     h1 {
       text-transform: uppercase;
       text-align: center;
@@ -71,30 +79,34 @@
   padding: 25px;
   border: 1px solid rgba($color: black, $alpha: 0.2);
   color: rgba(0, 0, 0, 0.5);
+
   .ownerzzz {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     img {
       margin-left: 5px;
     }
   }
+
   .review {
     margin-bottom: 10px;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
+
   h4 {
     text-align: center;
-    color: rgba($color:#113F67, $alpha: 0.8);    
+    color: rgba($color:#113F67, $alpha: 0.8);
     font-weight: bold;
     margin-bottom: 15px;
     font-size: 1.5rem;
   }
 }
 
-.add-review{
-  a{ 
+.add-review {
+  a {
     text-transform: uppercase;
     font-size: 1.3em;
     font-family: 'montserrat';
@@ -103,14 +115,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     &:hover {
       text-decoration: none;
       color: rgba($color: black, $alpha: 0.8);
     }
-    p{
+
+    p {
       margin-top: 15px;
       margin-left: 10px;
     }
+
     .fas.fa-plus {
       margin-top: 15px;
       margin-left: 10px;
@@ -122,16 +137,19 @@
 p {
   margin: 0;
 }
+
 .buttons {
   margin-top: 2vh;
   margin-bottom: 100px;
   margin-right: 200px;
+
   a {
     text-transform: uppercase;
     color: rgba($color: black, $alpha: 0.7);
     font-family: 'montserrat';
     font-size: 1.3em;
     font-weight: bold;
+
     &:hover {
       text-decoration: none;
       box-shadow: 0 3px 0 rgba($color: black, $alpha: 0.7);
@@ -144,6 +162,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
+
   .pokerent {
     text-transform: uppercase;
     font-family: 'montserrat';
@@ -152,11 +171,12 @@ p {
     background-color: rgba($color: black, $alpha: 0.7);
     color: white;
     padding: 5px 15px;
+
     &:hover {
-    color: rgba($color: black, $alpha: 0.7);
-    background-color: white;
-    box-shadow: 0 3px 0 rgba($color: black, $alpha: 0.7);
-    text-decoration: none;
+      color: rgba($color: black, $alpha: 0.7);
+      background-color: white;
+      box-shadow: 0 3px 0 rgba($color: black, $alpha: 0.7);
+      text-decoration: none;
     }
   }
 }
@@ -178,9 +198,99 @@ p {
   text-align: center;
   margin-top: 10px;
   font-weight: bold;
+
   &:hover {
-  color: rgba($color: #ee5a5a, $alpha: 0.8);
+    color: rgba($color: #ee5a5a, $alpha: 0.8);
 
     text-decoration: none;
   }
+}
+
+#info-container {
+  display: grid;
+  grid-template-columns: 5fr 5fr 9fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: space-between;
+  align-items: stretch;
+}
+
+#review-container {
+  width: 100vw;
+}
+
+#bookingform {
+  border-radius: 4px;
+  padding: 1em;
+  border: 1px solid rgba($color: black, $alpha: 0.2);
+  -moz-box-shadow: 0.5px 0.5px 5px 0px #656565;
+  -webkit-box-shadow: 0.5px 0.5px 5px 0px #656565;
+  -o-box-shadow: 0.5px 0.5px 5px 0px #656565;
+  box-shadow: 0.5px 0.5px 5px 0px #656565;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+}
+
+.pokemon-infos {
+  padding-top: 1em;
+
+  h1 {
+
+    color: rgba($color:#113F67, $alpha: 0.8);
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 3rem;
+  }
+}
+
+.owner-stuff {
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 2em;
+  border: 1px solid rgba($color: black, $alpha: 0.2);
+  -moz-box-shadow: 0.5px 0.5px 5px 0px #656565;
+  -webkit-box-shadow: 0.5px 0.5px 5px 0px #656565;
+  -o-box-shadow: 0.5px 0.5px 5px 0px #656565;
+  box-shadow: 0.5px 0.5px 5px 0px #656565;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+  p {
+    height: 50px;
+    font-family: "Montserrat";
+    font-size: 15px;
+
+  }
+}
+
+#ligne {
+  border: 1px solid rgba($color: black, $alpha: 0.2);
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+
+}
+
+#review {
+  border-radius: 4px;
+  color: #113F67;
+  background-color: rgba($color: white, $alpha: 0.5);
+  display: inline-block;
+  padding: 1em 2em;
+  width: 100%;
+  font-size: 18px;
+  border: 1px solid rgba($color: rgb(124, 124, 124), $alpha: 0.2);
+  border-bottom: none;
+  #rating-separator {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  #rating-stars {
+    padding-left: 8px;
+    display: inline-block;
+    font-size: 15px;
+    width: 12.4em;
+    color: #113F67;
+    background-color: gold;
+    border-radius: 4px;
+  }
+}
+
+#review:last-of-type {
+  border-bottom: 1px solid rgba($color: rgb(124, 124, 124), $alpha: 0.2);
 }
