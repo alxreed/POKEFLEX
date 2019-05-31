@@ -3,8 +3,10 @@
     <h1>My rentals</h1>
     <% @rentals.each do |rental| %>
       <div class="rental-card">
+      <%= link_to pokemon_path(rental.pokemon) do %>
         <div class="picofpokerental" style="background-image: url('<%= cl_image_path rental.pokemon.race.photo%>')">
         </div>
+        <% end %>
         <div class="pokeinfosrental">
           <h2><%= rental.pokemon.name %></h2>
           <p class="race-rental-user"><%= rental.pokemon.race.name %></p>
