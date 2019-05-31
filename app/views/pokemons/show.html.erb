@@ -37,7 +37,20 @@
   <div class="new-review-container">
     <h2>Add a review to <%= @pokemon.name.upcase %> </h2>
     <%= render 'reviews/form', pokemon: @pokemon, review: @review %>
-    <%= link_to 'Back', pokemon_path(@pokemon) %>
   </div>
-</div>
+<div class="show-poke-if">
+    <div class="buttons">
+      <%= link_to 'Back', pokemons_path %>
+    </div>
+    <% if policy(@pokemon).edit? %>
+      <div class="buttons">
+        <%= link_to "Update", edit_pokemon_path(@pokemon) %>
+      </div>
+    <% end %>
+    <% if policy(@pokemon).destroy? %>
+      <div class="buttons">
+        <%= link_to "Delete", pokemon_path(@pokemon), method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+    <% end %>
+  </div>
 </div>
