@@ -54,6 +54,14 @@ puts 'Creating users(may take some time)...'
 end
 puts ""
 
+puts "Creating pikachus"
+Pokemon.create!(name: "Mouad", level: 10, hp: 345, attack: 56, defense: 23, special_attack: 87, special_defense: 45, speed: 59, price: 89, user: User.all.sample, race: Race.find_by_name("pikachu"))
+print "#"
+
+Pokemon.create!(name: "Alex", level: 89, hp: 4345, attack: 86, defense: 43, special_attack: 97, special_defense: 55, speed: 99, price: 889, user: User.all.sample, race: Race.find_by_name("pikachu"))
+print "#"
+puts ""
+
 puts "Creating pokemons, gotta catch 'em all !"
 300.times do
   level = rand(10..100)
@@ -62,13 +70,6 @@ puts "Creating pokemons, gotta catch 'em all !"
 end
 puts ""
 
-puts "Creating pikachus"
-Pokemon.create!(name: "Mouad", level: 10, hp: 345, attack: 56, defense: 23, special_attack: 87, special_defense: 45, speed: 59, price: 89, user: User.all.sample, race: Race.find_by_name("pikachu"))
-print "#"
-
-Pokemon.create!(name: "Alex", level: 89, hp: 4345, attack: 86, defense: 43, special_attack: 97, special_defense: 55, speed: 99, price: 889, user: User.all.sample, race: Race.find_by_name("pikachu"))
-print "#"
-puts ""
 
 puts "creating reviews..." 
 
