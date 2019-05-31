@@ -13,9 +13,15 @@
 
       <table class="card__stats">
         <tbody><tr>
-          <th>HP</th>
+          <th>Level</th>
           <td><%= pokemon.level %></td>
         </tr>
+
+        <tr>
+          <th>HP</th>
+          <td><%= rand(1..100).to_s %></td>
+        </tr>
+
         <tr>
           <th>Attack</th>
           <td><%= rand(1..100).to_s %></td>
@@ -36,7 +42,7 @@
         </tr>
         <tr>
           <th>Speed</th>
-          <td><%= rand(1.100).to_s %></td>
+          <td><%= rand(1..100).to_s %></td>
         </tr>
       </tbody></table>
 
