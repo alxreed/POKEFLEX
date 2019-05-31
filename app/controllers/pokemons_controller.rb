@@ -19,9 +19,8 @@ class PokemonsController < ApplicationController
   end
 
   def create
-    @race = Race.find(params[:pokemon][:race_id])
     @pokemon = Pokemon.new(pokemon_params)
-    @pokemon.race = @race
+    # @pokemon.race = @race
     @pokemon.user = current_user
     authorize @pokemon
     if @pokemon.save
@@ -56,6 +55,6 @@ class PokemonsController < ApplicationController
   end
 
   def pokemon_params
-    params.require(:pokemon).permit(:name, :level, :price, :race_id)
+    params.require(:pokemon).permit(:name, :level, :price, :race_id, :hp, :attack, :defense, :special_attack, :special_defense, :speed)
   end
 end
