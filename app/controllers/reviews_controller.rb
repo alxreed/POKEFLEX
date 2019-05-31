@@ -20,9 +20,15 @@ class ReviewsController < ApplicationController
     authorize @review
     @review.pokemon = @pokemon
     if @review.save
-      redirect_to pokemon_path(@pokemon)
+      respond_to do |format|
+        format.html { redirect_to restaurant_path(@restaurant) }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render 'restaurants/show' }
+        format.js  # <-- idem
+      end
     end
   end
 
