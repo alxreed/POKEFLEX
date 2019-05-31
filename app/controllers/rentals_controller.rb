@@ -17,6 +17,8 @@ class RentalsController < ApplicationController
 
   def create
     @pokemon = Pokemon.find(params[:pokemon_id])
+    @pokemon.update(booked: true)
+    @pokemon.errors.full_messages
     @rental = Rental.new(rental_params.merge(pokemon: @pokemon, user: current_user))
     authorize @rental
     if @rental.save
