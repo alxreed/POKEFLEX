@@ -216,7 +216,11 @@ p {
 }
 
 #review-container {
+  justify-content: center;
   width: 100vw;
+  h2 {
+    margin-top: 40px;
+  }
 }
 
 #bookingform {
@@ -266,27 +270,26 @@ p {
 
 }
 
-#review {
+
+.review34 {
   border-radius: 4px;
   color: #113F67;
   background-color: rgba($color: white, $alpha: 0.5);
   display: inline-block;
   padding: 1em 2em;
   width: 100%;
+  margin: 0 auto;
   font-size: 18px;
   border: 1px solid rgba($color: rgb(124, 124, 124), $alpha: 0.2);
   border-bottom: none;
-  #rating-separator {
-    margin: 0;
-    margin-bottom: 10px;
-  }
+  text-align: center;
+  justify-content: center;
   #rating-stars {
     padding-left: 8px;
     display: inline-block;
     font-size: 15px;
     width: 12.4em;
     color: #113F67;
-    background-color: gold;
     border-radius: 4px;
   }
 }

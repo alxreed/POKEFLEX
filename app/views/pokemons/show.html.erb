@@ -25,8 +25,7 @@
   </div>
 </div>
 <div class="container" id="review-container">
-  <hr id="ligne">
-  <h2>Check what people think about <%= @pokemon.name %>: </h2>
+  <h2>Check what people think about <%= @pokemon.name.upcase %>: </h2>
   <div id="reviews">
     <% @pokemon.reviews.each do |review| %>
       <%= render "reviews/show", review: review %>
@@ -36,7 +35,7 @@
   <br>
   <br>
   <div class="new-review-container">
-    <h1>Add a review to <%= @pokemon.name.upcase %> </h1>
+    <h2>Add a review to <%= @pokemon.name.upcase %> </h2>
     <%= render 'reviews/form', pokemon: @pokemon, review: @review %>
     <%= link_to 'Back', pokemon_path(@pokemon) %>
   </div>
