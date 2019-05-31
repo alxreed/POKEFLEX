@@ -6,7 +6,7 @@ class PokemonsController < ApplicationController
     if params[:search].nil?
       @pokemons = policy_scope(Pokemon).order(created_at: :desc)
     else
-      @pokemons = policy_scope(Pokemon.joins(:race)).where("races.name ILIKE ?", params[:search])
+      @pokemons = policy_scope(Pokemon.joins(:race)).where("races.name ILIKE :query OR pokemons.name ILIKE :query", query: params[:search])
     end
   end
 
